@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100vh;
+    background-color: gray;
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    top: 0;
+}
+
+.navbar .header {
+    height: 60px;
+    background-color: rgb(48, 160, 180);
+    margin-bottom: 10px;
+}
+
+.navbar .footer {
+    height: 30px;
+    background-color: rgb(48, 160, 180);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 120px;
+}
+
+.wrapper .left-sidebar {
+    width: 350px;
+    padding: 20px;
+    height: auto;
+}
+
+.wrapper .right-sidebar {
+    width: 350px;
+    padding: 20px;
+}
+
+.wrapper .left-sidebar .card,
+.wrapper .right-sidebar .card {
+    height: 200px;
+    background-color: rgb(48, 160, 180);
+    margin-bottom: 20px;
+}
+
+.wrapper .content-wrapper {
+    width: calc(100vw - 700px);
+}
+
+.wrapper .content-wrapper .content {
+    height: 550px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.wrapper .content-wrapper .footer {
+    height: 200px;
+    background-color: white;
+}

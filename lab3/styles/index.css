@@ -1,0 +1,86 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content.day {
+    background-image: url('../images/Day.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content.night {
+    background-image: url('../images/Night.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#change {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.content.day #change {
+    background-color: yellow;
+    border: 5px solid rgb(255, 187, 0);
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+.content.day #change:hover,
+.content.night #change:hover {
+    border-width: 10px;
+}
+
+.content.night #change {
+    background-color: grey;
+    border: 5px solid rgb(228, 225, 225);
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+.moon-part {
+    border-radius: 100%;
+    position: absolute;
+    background-color: rgb(233, 238, 241);
+}
+
+.moon-part:first-child {
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    bottom: 10px;
+}
+
+.moon-part:nth-child(2) {
+    height: 30px;
+    width: 30px;
+    right: 5px;
+    top: 45%;
+}
+
+.moon-part:nth-child(3) {
+    height: 45px;
+    width: 45px;
+    left: 30%;
+    top: 10px;
+}
+
+.content.day .moon-part {
+    visibility: hidden;
+}
+
+.content.night .moon-part {
+    visibility: visible;
+}
